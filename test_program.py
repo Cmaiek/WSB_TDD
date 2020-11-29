@@ -11,6 +11,7 @@ class TestProgram(unittest.TestCase):
 
         wynik = program.zwroc_100()
         self.assertEqual(wynik, 100)
+        self.assertNotEqual(wynik, 101)
 
 
     def test_dodawanko(self):
@@ -37,7 +38,7 @@ class TestProgram(unittest.TestCase):
         wynik = program.dzielonko(x,y)
         self.assertEqual(wynik, x/y)
 
-    def test_rand_100(self):
+    def test_rand_100(self): #potentially failing to spice things up
         for x in range (0, 100):
             wynik = program.rand_100()
             self.assertLessEqual(wynik, 100)
